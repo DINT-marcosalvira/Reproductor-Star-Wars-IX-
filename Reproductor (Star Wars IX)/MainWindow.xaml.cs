@@ -24,5 +24,10 @@ namespace Reproductor__Star_Wars_IX_
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
