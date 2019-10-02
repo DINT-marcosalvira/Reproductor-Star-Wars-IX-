@@ -20,7 +20,7 @@
             <RadioButton x:Name="RadioTrailer1" DockPanel.Dock="Bottom" Checked="RadioTrailer2_Checked" >Trailer 1</RadioButton>
         </DockPanel>
         <Border BorderBrush="Black" BorderThickness="3">
-            <MediaElement x:Name="Pantalla"  Margin="10,10,10,10"></MediaElement>
+            <MediaElement x:Name="Pantalla"  ></MediaElement>
         </Border>
         
     </DockPanel>
