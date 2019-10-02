@@ -23,11 +23,46 @@ namespace Reproductor__Star_Wars_IX_
         public MainWindow()
         {
             InitializeComponent();
+            Pantalla.LoadedBehavior = MediaState.Manual;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BotonPlay_Click(object sender, RoutedEventArgs e)
         {
+            Pantalla.Play();
+        }
 
+        private void BotonPause_Click(object sender, RoutedEventArgs e)
+        {
+            Pantalla.Pause();
+        }
+
+        private void RadioTrailer2_Checked(object sender, RoutedEventArgs e)
+        {
+            if (RadioTrailer1.IsChecked == true)
+            {
+                Pantalla.Source = new Uri(@"C:\Users\alumno\trailer1.mp4");
+            }
+            else if (RadioTrailer2.IsChecked == true)
+            {
+                Pantalla.Source = new Uri(@"C:\Users\alumno\trailer2.mp4");
+            }
+        }
+
+        private void BotonStop_Click(object sender, RoutedEventArgs e)
+        {
+            Pantalla.Stop();
+        }
+
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            if(CheckSilence.IsChecked == true)
+            {
+                Pantalla.Volume = 0;
+            }
+            else
+            {
+                Pantalla.Volume = 50;
+            }
         }
     }
 }

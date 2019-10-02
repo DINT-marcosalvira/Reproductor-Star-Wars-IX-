@@ -8,21 +8,19 @@
         Title="MainWindow" Height="450" Width="800" Icon="128 (2).ico">
 
     <DockPanel LastChildFill="True">
-        <StackPanel DockPanel.Dock="Right" Orientation="Vertical" VerticalAlignment="Top">
-            <Button Margin="3,10,10,0" Width="100" Click="Button_Click">Play</Button>
-            <Button Margin="3,10,10,0">Pause</Button>
-            <Button Margin="3,10,10,0">Stop</Button>
-            <StackPanel>
-                <RadioButton >Trailer 1</RadioButton>
-                <RadioButton >Trailer 2</RadioButton>
-            </StackPanel>
-        </StackPanel>
-        
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Left">
-            <CheckBox Margin="8,3,3,6">Silencio</CheckBox>
+            <CheckBox x:Name="CheckSilence" Margin="8,3,3,6" Click="CheckBox_Click">Silencio</CheckBox>
         </StackPanel>
+
+        <DockPanel DockPanel.Dock="Right" LastChildFill="False">
+            <Button x:Name="BotonPlay" DockPanel.Dock="Top" Margin="3,10,10,0" Width="100" Click="BotonPlay_Click">Play</Button>
+            <Button x:Name="BotonPause" DockPanel.Dock="Top" Margin="3,10,10,0" Width="100" Click="BotonPause_Click">Pause</Button>
+            <Button x:Name="BotonStop" DockPanel.Dock="Top" Margin="3,10,10,0" Width="100" Click="BotonStop_Click">Stop</Button>
+            <RadioButton x:Name="RadioTrailer2" DockPanel.Dock="Bottom" Checked="RadioTrailer2_Checked">Trailer 2</RadioButton>
+            <RadioButton x:Name="RadioTrailer1" DockPanel.Dock="Bottom" Checked="RadioTrailer2_Checked" >Trailer 1</RadioButton>
+        </DockPanel>
         <Border BorderBrush="Black" BorderThickness="3">
-            <MediaElement Margin="10,10,10,10"></MediaElement>
+            <MediaElement x:Name="Pantalla"  Margin="10,10,10,10"></MediaElement>
         </Border>
         
     </DockPanel>
