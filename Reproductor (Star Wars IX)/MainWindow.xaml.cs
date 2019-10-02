@@ -57,11 +57,11 @@ namespace Reproductor__Star_Wars_IX_
         {
             if(CheckSilence.IsChecked == true)
             {
-                Pantalla.Volume = 0;
+                Pantalla.IsMuted = true;
             }
             else
             {
-                Pantalla.Volume = 50;
+                Pantalla.IsMuted =false;
             }
         }
     }
